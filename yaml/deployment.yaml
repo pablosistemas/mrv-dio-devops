@@ -19,6 +19,6 @@ spec:
       - name: container-registry-secret
       containers:
       - name: dio-tutorial
-        image: mrvaksdigitalcontainerregistry.azurecr.io/dio/tutorial/api:120958
+        image: mrvaksdigitalcontainerregistry.azurecr.io/dio/tutorial/api:__TAG__
         ports:
         - containerPort: 80
