@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dio-tutorial-ingress
+  namespace: dio-tutorial
+  labels:
+    app: dio-tutorial
+spec:
+  rules:
+  - host: diotutorial.mrv.com.br
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: dio-tutorial-service
+          servicePort: 80
