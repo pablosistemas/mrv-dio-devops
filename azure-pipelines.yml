@@ -18,3 +18,14 @@ steps:
     command: 'buildAndPush'
     Dockerfile: './Dockerfile'
     buildContext: '.'
+
+- task: Kubernetes@1
+  displayName: Deploy image in Kubernetes
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceEndpoint: 'SC Azure Mrv Aks DevQa'
+    namespace: 'dio-tutorial'
+    command: 'apply'
+    useConfigurationFile: true
+    configuration: 'yaml/'
+    containerRegistryType: 'Azure Container Registry'
