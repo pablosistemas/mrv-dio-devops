@@ -7,7 +7,7 @@ metadata:
     app: dio-tutorial
 spec:
   rules:
-  - host: diotutorial.mrv.com.br
+  - host: diotutorial.your.domain
     http:
       paths:
       - path: /

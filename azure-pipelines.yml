@@ -13,7 +13,7 @@ steps:
 - task: Docker@2
   displayName: Docker build and push
   inputs:
-    containerRegistry: 'MrvAksDigital - Container Registry'
+    containerRegistry: 'Put here your container registry service connection name'
     repository: 'dio/tutorial/api'
     command: 'buildAndPush'
     Dockerfile: './Dockerfile'
@@ -23,7 +23,7 @@ steps:
   displayName: Deploy image in Kubernetes
   inputs:
     connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'SC Azure Mrv Aks DevQa'
+    kubernetesServiceEndpoint: 'Put here your Kubernetes service connection name'
     namespace: 'dio-tutorial'
     command: 'apply'
     useConfigurationFile: true
