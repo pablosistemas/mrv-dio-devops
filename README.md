@@ -22,7 +22,7 @@ Running WebApi in host port 8080:
 docker run --detach --publish 8080:8080 --publish 8081:8081 --publish 8082:8082 --name dio-docker-tut dio-docker-tutorial:1.3
 ```
 
-If you are using Docker native, so youy test must be done agains localhost. Using cUrl:
+If you are using Docker native, so your test must be done against _localhost_:
 ```
 curl -X GET -v http://localhost:8080/weatherforecast
 ```
